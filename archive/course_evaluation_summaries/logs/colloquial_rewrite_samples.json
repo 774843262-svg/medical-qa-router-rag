@@ -1,0 +1,18 @@
+[
+  {
+    "sample_id": 0,
+    "original_question": "What are the treatments for Paroxysmal Hemicrania ?",
+    "colloquial_question": "What can be done about those short, intense headaches that keep coming back on one side of my head?",
+    "gold_answer": "The nonsteroidal anti-inflammatory drug (NSAID) indomethacin often provides complete relief from symptoms. Other less effective NSAIDs, calcium-channel blocking drugs (such as verapamil), and corticosteroids may be used to treat the disorder. Patients with both paroxysmal hemicrania and trigeminal neuralgia (a condition of the 5th cranial nerve that causes sudden, severe pain typically felt on one side of the jaw or cheek) should receive treatment for each disorder.",
+    "rewrite_strategy": "Replaced the medical term 'Paroxysmal Hemicrania' with a description of its symptoms ('short, intense headaches on one side') and used casual phrasing like 'What can be done about' instead of formal 'What are the treatments for'.",
+    "model": "deepseek-v4-flash"
+  },
+  {
+    "sample_id": 1,
+    "original_question": "What are the symptoms of Glycogen storage disease type 13 ?",
+    "colloquial_question": "What are the signs of a rare sugar storage problem called type 13?",
+    "gold_answer": "Glycogen storage disease type 13 causes muscle pain (myalgia). Individuals with GSD13 also experience exercise intolerance, which means they have difficulty exercising because they may have muscle weakness and tire easily. Clinical findings include adult onset, autosomal recessive inheritance, elevated serum creatine phosphokinase, exercise intolerance, increased muscle glycogen content, and myalgia.",
+    "rewrite_strategy": "Replaced technical term 'Glycogen storage disease type 13' with simpler description 'rare sugar storage problem called type 13', and used more common word 'signs' instead of 'symptoms'.",
+    "model": "deepseek-v4-flash"
+  }
+]

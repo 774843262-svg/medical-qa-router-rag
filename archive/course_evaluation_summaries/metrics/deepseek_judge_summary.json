@@ -1,0 +1,18 @@
+{
+  "base_rag": {
+    "n": 100,
+    "avg_retrieval_relevance": 4.62,
+    "avg_faithfulness": 4.77,
+    "hallucination_count": 8,
+    "hallucination_rate": 0.08,
+    "unsupported_claims_count": 23
+  },
+  "lora_rag": {
+    "n": 100,
+    "avg_retrieval_relevance": 4.65,
+    "avg_faithfulness": 4.66,
+    "hallucination_count": 12,
+    "hallucination_rate": 0.12,
+    "unsupported_claims_count": 37
+  }
+}

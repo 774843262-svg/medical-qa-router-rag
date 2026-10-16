@@ -1,0 +1,44 @@
+[
+  {
+    "doc_id": "MEDQUAD_00001",
+    "question": "What are the treatments for Paroxysmal Hemicrania ?",
+    "answer": "The nonsteroidal anti-inflammatory drug (NSAID) indomethacin often provides complete relief from symptoms. Other less effective NSAIDs, calcium-channel blocking drugs (such as verapamil), and corticosteroids may be used to treat the disorder. Patients with both paroxysmal hemicrania and trigeminal neuralgia (a condition of the 5th cranial nerve that causes sudden, severe pain typically felt on one side of the jaw or cheek) should receive treatment for each disorder.",
+    "source": "NINDS (National Institute of Neurological Disorders and Stroke)",
+    "focus_area": "Paroxysmal Hemicrania"
+  },
+  {
+    "doc_id": "MEDQUAD_00002",
+    "question": "What are the symptoms of Glycogen storage disease type 13 ?",
+    "answer": "Glycogen storage disease type 13 causes muscle pain (myalgia). Individuals with GSD13 also experience exercise intolerance, which means they have difficulty exercising because they may have muscle weakness and tire easily. Clinical findings include adult onset, autosomal recessive inheritance, elevated serum creatine phosphokinase, exercise intolerance, increased muscle glycogen content, and myalgia.",
+    "source": "GARD (Genetic and Rare Diseases Information Center)",
+    "focus_area": "Glycogen storage disease type 13"
+  },
+  {
+    "doc_id": "MEDQUAD_00003",
+    "question": "What is asthma ?",
+    "answer": "Asthma is a chronic (long-term) lung disease that inflames and narrows the airways. Asthma causes recurring periods of wheezing (a whistling sound when you breathe), chest tightness, shortness of breath, and coughing. The coughing often occurs at night or early in the morning.",
+    "source": "NHLBI (National Heart, Lung, and Blood Institute)",
+    "focus_area": "Asthma"
+  },
+  {
+    "doc_id": "MEDQUAD_00004",
+    "question": "What are the symptoms of Type 2 Diabetes ?",
+    "answer": "Symptoms of type 2 diabetes often develop slowly and include increased thirst and frequent urination, increased hunger, feeling tired and fatigued, blurred vision, slow-healing sores or frequent infections, and areas of darkened skin. Some people with type 2 diabetes have no symptoms at first.",
+    "source": "NIDDK (National Institute of Diabetes and Digestive and Kidney Diseases)",
+    "focus_area": "Diabetes"
+  },
+  {
+    "doc_id": "MEDQUAD_00005",
+    "question": "What is breast cancer ?",
+    "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast. The most common type of breast cancer is ductal carcinoma, which begins in the cells of the ducts. Breast cancer can also begin in the cells of the lobules and in other tissues in the breast.",
+    "source": "NCI (National Cancer Institute)",
+    "focus_area": "Breast Cancer"
+  },
+  {
+    "doc_id": "MEDQUAD_00006",
+    "question": "How to prevent High Blood Pressure ?",
+    "answer": "You can help prevent high blood pressure by following a healthy lifestyle. This includes eating a healthy diet (such as the DASH eating plan with reduced sodium), maintaining a healthy weight, getting regular physical activity, limiting alcohol intake, not smoking, and managing stress.",
+    "source": "NHLBI (National Heart, Lung, and Blood Institute)",
+    "focus_area": "High Blood Pressure"
+  }
+]

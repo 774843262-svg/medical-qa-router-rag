@@ -1,0 +1,111 @@
+=== 1. Router-RAG Interactive Pathway Verification ===
+[Standard Query]   'What are the treatments for Paroxysmal Hemicrania ?'
+  -> Top-1 Similarity: 1.0000 (Threshold: 0.68)
+  -> Routed Pathway:   BRANCH_A_DIRECT_CONFIRMATION
+  -> Direct Answer:    The nonsteroidal anti-inflammatory drug (NSAID) indomethacin often provides complete relief from symptoms. Oth...
+
+[Colloquial Query] 'I feel tired and thirsty all the time. Could this be diabetes?'
+  -> Top-1 Similarity: 0.4484 (Threshold: 0.68)
+  -> Routed Pathway:   BRANCH_B_RAG_FALLBACK
+  -> Fallback Output:  Based on retrieved NIH/MedQuAD clinical references (NIDDK (National Institute of Diabetes and Digestive and Ki...
+  -> Safety Warning:   ⚠️ Educational Demonstration Only: This response is synthesized from retrieved MedQuAD references for academic evaluation and does NOT constitute professional medical advice, diagnosis, or treatment.
+
+=== 2. Experimental Benchmark Summaries (outputs/metrics/) ===
+--- colloquial_retrieval_summary.json ---
+{
+  "n_samples": 100,
+  "top_k": 5,
+  "router_threshold": 0.68,
+  "original_question": {
+    "n": 100,
+    "recall_at_1": 0.58,
+    "recall_at_3": 0.84,
+    "recall_at_5": 0.89,
+    "mrr_at_5": 0.7026666666666668,
+    "avg_top1_similarity": 0.7537369990348816,
+    "router_direct_hit_ratio": 0.88,
+    "router_direct_hit_count": 88
+  },
+  "colloquial_question": {
+    "n": 100,
+    "recall_at_1": 0.42,
+    "recall_at_3": 0.64,
+    "recall_at_5": 0.74,
+    "mrr_at_5": 0.5430000000000001,
+    "avg_top1_similarity": 0.6833170804381371,
+    "router_direct_hit_ratio": 0.53,
+    "router_direct_hit_count": 53
+  },
+  "avg_top1_similarity_drop": 0.07041991859674454,
+  "median_top1_similarity_drop": 0.050238728523254395
+}
+
+--- deepseek_judge_summary.json ---
+{
+  "base_rag": {
+    "n": 100,
+    "avg_retrieval_relevance": 4.62,
+    "avg_faithfulness": 4.77,
+    "hallucination_count": 8,
+    "hallucination_rate": 0.08,
+    "unsupported_claims_count": 23
+  },
+  "lora_rag": {
+    "n": 100,
+    "avg_retrieval_relevance": 4.65,
+    "avg_faithfulness": 4.66,
+    "hallucination_count": 12,
+    "hallucination_rate": 0.12,
+    "unsupported_claims_count": 37
+  }
+}
+
+--- generation_metrics_summary.json ---
+{
+  "n_samples": 100,
+  "top_k": 3,
+  "max_new_tokens": 512,
+  "temperature": 0.3,
+  "bert_score_model": "distilbert-base-uncased",
+  "base_rag": {
+    "rouge_l": 0.42911444243107594,
+    "bertscore": {
+      "precision": 0.8764634132385254,
+      "recall": 0.8394611477851868,
+      "f1": 0.8565704226493835
+    }
+  },
+  "lora_rag": {
+    "rouge_l": 0.7642600765852695,
+    "bertscore": {
+      "precision": 0.9491876363754272,
+      "recall": 0.9378492832183838,
+      "f1": 0.9429618120193481
+    }
+  }
+}
+
+--- retrieval_router_summary.json ---
+{
+  "total": 818,
+  "top_k": 5,
+  "router_threshold": 0.68,
+  "recall_at_1": 0.6454767726161369,
+  "recall_at_3": 0.863080684596577,
+  "recall_at_5": 0.9388753056234719,
+  "mrr_at_5": 0.7604319478402608,
+  "avg_top1_similarity": 0.7528997928559926,
+  "router_direct_hit_count": 715,
+  "router_direct_hit_ratio": 0.8740831295843521,
+  "router_direct_and_gold_in_top3_count": 615,
+  "router_direct_and_gold_in_top3_ratio": 0.7518337408312958
+}
+
+test_01_high_confidence_branch_a_routing (__main__.TestMedicalQARouterRAG.test_01_high_confidence_branch_a_routing) ... ok
+test_02_low_confidence_colloquial_branch_b_routing (__main__.TestMedicalQARouterRAG.test_02_low_confidence_colloquial_branch_b_routing) ... ok
+test_03_llm_judge_prompt_and_summary (__main__.TestMedicalQARouterRAG.test_03_llm_judge_prompt_and_summary) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+OK

@@ -1,0 +1,31 @@
+[
+  {
+    "sample_id": 0,
+    "method": "base_rag",
+    "model": "deepseek-v4-flash",
+    "question": "What are the treatments for Paroxysmal Hemicrania ?",
+    "judge": {
+      "retrieval_relevance_score": 5,
+      "faithfulness_score": 5,
+      "hallucination": false,
+      "unsupported_claims": [],
+      "reason": "The assistant answer is entirely supported by Reference 1, which directly matches the gold answer's treatment information.",
+      "raw_response": "{\"retrieval_relevance_score\": 5, \"faithfulness_score\": 5, \"hallucination\": false, \"unsupported_claims\": [], \"reason\": \"The assistant answer is entirely supported by Reference 1, which directly matches the gold answer's treatment information.\"}"
+    }
+  },
+  {
+    "sample_id": 1,
+    "method": "lora_rag",
+    "model": "deepseek-v4-flash",
+    "question": "What are the symptoms of Glycogen storage disease type 13 ?",
+    "judge": {
+      "retrieval_relevance_score": 5,
+      "faithfulness_score": 4,
+      "hallucination": true,
+      "unsupported_claims": [
+        "Routine liver biopsy is mandatory for all GSD13 patients"
+      ],
+      "reason": "Core symptoms match Reference 1, but the LoRA adapter introduced an unsupported diagnostic claim not present in the retrieved NIH reference."
+    }
+  }
+]

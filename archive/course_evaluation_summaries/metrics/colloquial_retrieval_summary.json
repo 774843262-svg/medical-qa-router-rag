@@ -1,0 +1,27 @@
+{
+  "n_samples": 100,
+  "top_k": 5,
+  "router_threshold": 0.68,
+  "original_question": {
+    "n": 100,
+    "recall_at_1": 0.58,
+    "recall_at_3": 0.84,
+    "recall_at_5": 0.89,
+    "mrr_at_5": 0.7026666666666668,
+    "avg_top1_similarity": 0.7537369990348816,
+    "router_direct_hit_ratio": 0.88,
+    "router_direct_hit_count": 88
+  },
+  "colloquial_question": {
+    "n": 100,
+    "recall_at_1": 0.42,
+    "recall_at_3": 0.64,
+    "recall_at_5": 0.74,
+    "mrr_at_5": 0.5430000000000001,
+    "avg_top1_similarity": 0.6833170804381371,
+    "router_direct_hit_ratio": 0.53,
+    "router_direct_hit_count": 53
+  },
+  "avg_top1_similarity_drop": 0.07041991859674454,
+  "median_top1_similarity_drop": 0.050238728523254395
+}

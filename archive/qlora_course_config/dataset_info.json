@@ -1,0 +1,11 @@
+{
+  "medquad_alpaca_train": {
+    "file_name": "../data/medquad_alpaca_sample.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  }
+}
